@@ -32,4 +32,15 @@ spec:
     protocol: TCP
     port: 80
     targetPort: 8080
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: mysecret
+type: Opaque
+data:
+  password: bXl1c2Vy  # echo -n myuser | base64
+  username: bXlwYXNz  #  echo -n mypass | base64
+
+
 
